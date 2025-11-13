@@ -1,43 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ZESTOPIA 26 </title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZESTOPIA 26</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
-  <header>
-    <h1>ZESTOPIA 26 </h1>
-    <p>Explore • Experience • Enjoy</p>
-  </header>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">CampusEvents</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#fests">Fests</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-  <section class="slider-container">
-    <div class="slider">
-      <div class="slide active">
-        <img src="event1.jpg" alt="Battle of Bands">
-        <h3>Battle of Bands</h3>
-        <a href="event1.html" class="btn">View Details</a>
-      </div>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>ZESTOPIA 26</h1>
+            <p>Discover exciting events happening across campuses</p>
+            <button class="cta-button" onclick="scrollToFests()">Explore Events</button>
+        </div>
+    </section>
 
-      <div class="slide">
-        <img src="event2.jpg" alt="Dance Mania">
-        <h3>Dance Mania</h3>
-        <a href="event2.html" class="btn">View Details</a>
-      </div>
+    <!-- Fest Showcase Section -->
+    <section id="fests" class="fests-section">
+        <div class="container">
+            <h2 class="section-title">Featured Fests</h2>
+            
+            <!-- Fest Cards -->
+            <div class="fest-cards">
+                <div class="fest-card" data-fest="techfest">
+                    <div class="fest-image">
+                        <img src="images/techfest.jpg" alt="Tech Fest" onerror="this.src='https://via.placeholder.com/400x250/4a6fa5/ffffff?text=Tech+Fest'">
+                    </div>
+                    <div class="fest-info">
+                        <h3>Annual Tech Fest</h3>
+                        <p>Department of Computer Science</p>
+                        <span class="date">March 15-17, 2024</span>
+                    </div>
+                </div>
 
-      <div class="slide">
-        <img src="https://source.unsplash.com/400x600/?coding,technology" alt="Hackathon">
-        <h3>Hackathon 24-Hour</h3>
-        <a href="event3.html" class="btn">View Details</a>
-      </div>
-    </div>
+                <div class="fest-card" data-fest="cultural">
+                    <div class="fest-image">
+                        <img src="images/cultural.jpg" alt="Cultural Fest" onerror="this.src='https://via.placeholder.com/400x250/4fc3a1/ffffff?text=Cultural+Fest'">
+                    </div>
+                    <div class="fest-info">
+                        <h3>Cultural Extravaganza</h3>
+                        <p>Student Union</p>
+                        <span class="date">April 5-7, 2024</span>
+                    </div>
+                </div>
 
-    <!-- navigation arrows -->
-    <div class="nav prev">&#10094;</div>
-    <div class="nav next">&#10095;</div>
-  </section>
+                <div class="fest-card" data-fest="sports">
+                    <div class="fest-image">
+                        <img src="images/sports.jpg" alt="Sports Fest" onerror="this.src='https://via.placeholder.com/400x250/166088/ffffff?text=Sports+Fest'">
+                    </div>
+                    <div class="fest-info">
+                        <h3>Sports Festival</h3>
+                        <p>Physical Education Department</p>
+                        <span class="date">February 20-22, 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script src="js/script.js"></script>
+    <!-- Events Slides Section -->
+    <section class="events-section">
+        <div class="container">
+            <div class="events-header">
+                <h2 class="fest-name" id="festName">Select a Fest to View Events</h2>
+                <p class="fest-description" id="festDescription">Click on any fest card above to see its events</p>
+            </div>
+
+            <!-- Events Slideshow -->
+            <div class="events-slideshow" id="eventsSlideshow">
+                <div class="slides-container" id="slidesContainer">
+                    <!-- Events will be loaded here dynamically -->
+                </div>
+                
+                <!-- Navigation Buttons -->
+                <button class="slide-nav prev" id="prevSlide">‹</button>
+                <button class="slide-nav next" id="nextSlide">›</button>
+                
+                <!-- Dots Indicator -->
+                <div class="dots-container" id="dotsContainer"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 CampusEvents. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/slideshow.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
