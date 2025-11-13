@@ -401,4 +401,131 @@ class CampusEventsApp {
                             id: 'tech-1',
                             name: 'Hackathon 2024',
                             description: '24-hour coding marathon to solve real-world challenges',
-                            fullDescription: 'Join us for an intense 24
+                            fullDescription: 'Join us for an intense 24-hour coding competition where you\'ll work in teams to develop innovative solutions for real-world problems. Food, drinks, and mentorship provided throughout the event.',
+                            image: 'assets/images/hackathon.jpg',
+                            date: '2024-03-15',
+                            time: '10:00 AM - 10:00 AM (Next Day)',
+                            venue: 'CS Department Lab',
+                            category: 'Competition',
+                            organizer: 'Computer Science Department'
+                        },
+                        {
+                            id: 'tech-2',
+                            name: 'AI & ML Workshop',
+                            description: 'Hands-on workshop on artificial intelligence and machine learning fundamentals',
+                            fullDescription: 'Learn the fundamentals of Artificial Intelligence and Machine Learning in this intensive workshop. No prior experience required. We\'ll cover Python basics, neural networks, and practical applications.',
+                            image: 'assets/images/ai-workshop.jpg',
+                            date: '2024-03-16',
+                            time: '2:00 PM - 5:00 PM',
+                            venue: 'Auditorium A',
+                            category: 'Workshop',
+                            organizer: 'AI Research Club'
+                        },
+                        {
+                            id: 'tech-3',
+                            name: 'Robotics Exhibition',
+                            description: 'Showcase of innovative robotics projects by students',
+                            fullDescription: 'Witness the future of robotics with projects ranging from autonomous vehicles to humanoid robots. Meet the creators and see live demonstrations of their incredible inventions.',
+                            image: 'assets/images/robotics.jpg',
+                            date: '2024-03-17',
+                            time: '11:00 AM - 4:00 PM',
+                            venue: 'Main Hall',
+                            category: 'Exhibition',
+                            organizer: 'Robotics Club'
+                        },
+                        {
+                            id: 'tech-4',
+                            name: 'Tech Quiz Championship',
+                            description: 'Test your knowledge in technology and computing',
+                            fullDescription: 'Compete in our technology trivia competition covering topics from computer history to cutting-edge innovations. Great prizes for the top teams!',
+                            image: 'assets/images/tech-quiz.jpg',
+                            date: '2024-03-16',
+                            time: '4:00 PM - 6:00 PM',
+                            venue: 'Seminar Hall',
+                            category: 'Quiz',
+                            organizer: 'Student Tech Committee'
+                        }
+                    ]
+                },
+                cultural: {
+                    id: 'cultural',
+                    name: 'Cultural Extravaganza',
+                    type: 'Cultural',
+                    department: 'Student Union',
+                    description: 'Experience the vibrant cultural diversity through music, dance, art, and theatrical performances.',
+                    date: '2024-04-05',
+                    image: 'assets/images/cultural.jpg',
+                    events: [
+                        {
+                            id: 'cultural-1',
+                            name: 'Battle of Bands',
+                            description: 'Music competition featuring the best college bands',
+                            fullDescription: 'Witness an electrifying night of music as college bands compete for the championship title. Rock, pop, jazz, and indie performances guaranteed!',
+                            image: 'assets/images/battle-bands.jpg',
+                            date: '2024-04-05',
+                            time: '6:00 PM - 10:00 PM',
+                            venue: 'Open Amphitheater',
+                            category: 'Music',
+                            organizer: 'Music Society'
+                        },
+                        {
+                            id: 'cultural-2',
+                            name: 'Dance Championship',
+                            description: 'Showcase your dance skills in various categories',
+                            fullDescription: 'From classical to contemporary, hip-hop to ballet, this competition has it all. Solo and group performances welcome. Impressive cash prizes!',
+                            image: 'assets/images/dance.jpg',
+                            date: '2024-04-06',
+                            time: '3:00 PM - 7:00 PM',
+                            venue: 'Main Auditorium',
+                            category: 'Dance',
+                            organizer: 'Dance Club'
+                        }
+                    ]
+                },
+                sports: {
+                    id: 'sports',
+                    name: 'Inter-College Sports Festival',
+                    type: 'Sports',
+                    department: 'Physical Education Department',
+                    description: 'Get ready for intense competition and athletic excellence across multiple sports disciplines.',
+                    date: '2024-02-20',
+                    image: 'assets/images/sports.jpg',
+                    events: [
+                        {
+                            id: 'sports-1',
+                            name: 'Basketball Tournament',
+                            description: 'Inter-department basketball championship',
+                            fullDescription: 'Witness thrilling basketball action as departments compete for glory. Fast-paced games, incredible shots, and intense rivalries!',
+                            image: 'assets/images/basketball.jpg',
+                            date: '2024-02-20',
+                            time: '9:00 AM - 6:00 PM',
+                            venue: 'Main Court',
+                            category: 'Sports',
+                            organizer: 'Sports Department'
+                        },
+                        {
+                            id: 'sports-2',
+                            name: 'Cricket Championship',
+                            description: 'Faculty vs Students cricket match',
+                            fullDescription: 'The classic rivalry continues! Watch as faculty and students face off in this exciting cricket match. Who will emerge victorious this year?',
+                            image: 'assets/images/cricket.jpg',
+                            date: '2024-02-21',
+                            time: '2:00 PM - 7:00 PM',
+                            venue: 'Cricket Ground',
+                            category: 'Sports',
+                            organizer: 'Sports Committee'
+                        }
+                    ]
+                }
+            }
+        };
+    }
+}
+
+// Initialize the application when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+    new CampusEventsApp();
+});
+
+// Export for potential module use
+export default CampusEventsApp;
