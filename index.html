@@ -3,46 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RUNFINITE FEST 2025 | Stranger Things Theme</title>
+  <title>College Fest 2025 | Runfinite</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    /* ------------------------------
-       GENERAL STYLES
-    ------------------------------ */
+    /* =======================
+       GLOBAL STYLES
+    ======================= */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Press Start 2P', cursive;
-      background: url('https://i.ibb.co/YjTt9T8/stranger-things-bg.jpg') no-repeat center center/cover;
-      color: #ff1b1b;
+      font-family: 'Poppins', sans-serif;
+      background: #f7f8fc;
+      color: #222;
       overflow-x: hidden;
+      scroll-behavior: smooth;
     }
 
-    .overlay {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.75);
-      z-index: -1;
+    h1, h2, h3 {
+      font-weight: 700;
+      color: #222;
     }
 
-    h1, h2 {
-      font-family: 'Creepster', cursive;
-      letter-spacing: 3px;
-      text-shadow: 0 0 20px #ff0000;
+    p {
+      line-height: 1.6;
     }
 
-    /* ------------------------------
-       HEADER / HERO SECTION
-    ------------------------------ */
+    /* =======================
+       HEADER / HERO
+    ======================= */
     header {
       height: 100vh;
       display: flex;
@@ -50,131 +45,132 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      padding: 20px;
+      background: linear-gradient(135deg, #4f46e5, #9333ea);
+      color: white;
+      position: relative;
     }
 
     header img {
-      width: 180px;
+      width: 120px;
       height: auto;
       margin-bottom: 20px;
-      filter: drop-shadow(0 0 10px #ff0000);
     }
 
     header h1 {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-bottom: 10px;
-      color: #ff0000;
     }
 
     header p {
-      color: #fff;
-      font-size: 0.8rem;
-      text-shadow: 0 0 10px #ff0000;
+      font-size: 1rem;
+      opacity: 0.9;
+      max-width: 600px;
     }
 
     .scroll-down {
-      margin-top: 40px;
-      font-size: 0.7rem;
-      animation: flicker 2s infinite;
+      position: absolute;
+      bottom: 40px;
+      font-size: 0.9rem;
+      color: #fff;
+      animation: bounce 2s infinite;
     }
 
-    @keyframes flicker {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.3; }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
     }
 
-    /* ------------------------------
+    /* =======================
        ABOUT SECTION
-    ------------------------------ */
+    ======================= */
     section#about {
-      background: rgba(10, 10, 10, 0.85);
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    section#about h2 {
-      color: #ff0000;
-      margin-bottom: 20px;
-      font-size: 2rem;
-    }
-
-    section#about p {
-      color: #ddd;
-      max-width: 700px;
-      margin: 0 auto;
-      line-height: 1.8;
-      font-size: 0.8rem;
-    }
-
-    /* ------------------------------
-       PROGRAMS SECTION
-    ------------------------------ */
-    section#programs {
+      background: white;
       padding: 80px 20px;
       text-align: center;
     }
 
+    section#about h2 {
+      color: #4f46e5;
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    section#about p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    /* =======================
+       PROGRAMS SECTION
+    ======================= */
+    section#programs {
+      padding: 80px 20px;
+      background: #f3f4f6;
+      text-align: center;
+    }
+
     section#programs h2 {
-      color: #ff0000;
+      color: #4f46e5;
       font-size: 2rem;
       margin-bottom: 40px;
     }
 
     .program-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 30px;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
     }
 
     .program-card {
-      position: relative;
-      cursor: pointer;
-      overflow: hidden;
+      background: white;
       border-radius: 12px;
-      border: 2px solid #ff0000;
-      box-shadow: 0 0 20px #ff0000;
-      transition: transform 0.3s;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
     }
 
     .program-card:hover {
-      transform: scale(1.05);
+      transform: translateY(-8px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     }
 
     .program-card img {
       width: 100%;
-      height: 200px;
+      height: 180px;
       object-fit: cover;
-      filter: brightness(0.8);
     }
 
     .program-card h3 {
-      position: absolute;
-      bottom: 10px;
-      left: 0;
-      right: 0;
-      color: #fff;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 10px;
-      font-size: 0.8rem;
-      text-shadow: 0 0 10px #ff0000;
+      font-size: 1.1rem;
+      margin: 15px 0 5px;
+      color: #333;
     }
 
-    /* ------------------------------
+    .program-card p {
+      color: #666;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+
+    /* =======================
        MODAL POPUP
-    ------------------------------ */
+    ======================= */
     .modal {
       position: fixed;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: rgba(0, 0, 0, 0.85);
+      background: rgba(0,0,0,0.6);
       display: flex;
       justify-content: center;
       align-items: center;
       visibility: hidden;
       opacity: 0;
-      transition: all 0.4s ease;
+      transition: all 0.3s ease;
       z-index: 999;
     }
 
@@ -184,100 +180,113 @@
     }
 
     .modal-content {
-      background: #111;
-      border: 2px solid #ff0000;
+      background: #fff;
+      border-radius: 12px;
       padding: 30px;
       max-width: 500px;
+      width: 90%;
       text-align: center;
-      border-radius: 12px;
-      box-shadow: 0 0 25px #ff0000;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      animation: fadeIn 0.4s ease;
+    }
+
+    @keyframes fadeIn {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
     }
 
     .modal-content h3 {
-      color: #ff0000;
+      color: #4f46e5;
       margin-bottom: 15px;
     }
 
     .modal-content p {
-      color: #ddd;
-      font-size: 0.8rem;
+      color: #555;
+      font-size: 0.95rem;
       line-height: 1.6;
     }
 
     .close-btn {
       margin-top: 20px;
       padding: 10px 20px;
-      background: #ff0000;
+      background: #4f46e5;
+      color: white;
       border: none;
       border-radius: 8px;
-      font-weight: bold;
-      color: #000;
+      font-weight: 600;
       cursor: pointer;
-      transition: 0.3s;
+      transition: background 0.3s ease;
     }
 
     .close-btn:hover {
-      background: #fff;
-      color: #ff0000;
-      box-shadow: 0 0 15px #ff0000;
+      background: #3730a3;
     }
 
+    /* =======================
+       FOOTER
+    ======================= */
     footer {
+      background: white;
       text-align: center;
-      padding: 40px;
+      padding: 40px 20px;
       color: #777;
-      font-size: 0.6rem;
+      font-size: 0.9rem;
+      border-top: 1px solid #eee;
     }
   </style>
 </head>
-<body>
-  <div class="overlay"></div>
 
-  <!-- HEADER -->
+<body>
+  <!-- HERO -->
   <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Stranger_Things_logo.png" alt="Fest Logo">
-    <h1>RUNFINITE FEST 2025</h1>
-    <p>Welcome to the Upside Down!</p>
-    <p class="scroll-down">Scroll Down ▼</p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Generic_college_logo.png" alt="College Logo">
+    <h1>Runfinite Fest 2025</h1>
+    <p>Experience innovation, creativity, and competition in our annual college fest!</p>
+    <div class="scroll-down">Scroll Down ▼</div>
   </header>
 
-  <!-- ABOUT SECTION -->
+  <!-- ABOUT -->
   <section id="about">
     <h2>About the Fest</h2>
     <p>
-      Get ready to enter the Upside Down at our Stranger Things–themed college fest!  
-      Experience thrilling competitions, mysterious games, and an atmosphere straight out of Hawkins.  
-      From sports and e-gaming to quizzes and fun events — it’s time to embrace the strange!
+      Welcome to <strong>Runfinite Fest 2025</strong> — where energy meets innovation.  
+      Join us for an unforgettable experience filled with exciting events, sports tournaments, and e-sports showdowns.  
+      Get ready to compete, connect, and celebrate talent across every field.
     </p>
   </section>
 
-  <!-- PROGRAM SECTION -->
+  <!-- PROGRAMS -->
   <section id="programs">
-    <h2>Programs</h2>
+    <h2>Our Programs</h2>
+
     <div class="program-grid">
       <div class="program-card" data-program="runfinite">
         <img src="https://i.ibb.co/9psTYSh/run.jpg" alt="Runfinite">
-        <h3>🏃‍♂️ Runfinite</h3>
+        <h3>Runfinite Marathon</h3>
+        <p>Test your endurance and speed.</p>
       </div>
 
       <div class="program-card" data-program="sopy">
         <img src="https://i.ibb.co/MhV0q7z/football.jpg" alt="Sopy Football">
-        <h3>⚽ Sopy Football</h3>
+        <h3>Sopy Football</h3>
+        <p>Play your way to the trophy.</p>
       </div>
 
       <div class="program-card" data-program="egames">
         <img src="https://i.ibb.co/VDH1cQh/gaming.jpg" alt="E-Games">
-        <h3>🎮 E-Games Arena</h3>
+        <h3>E-Games Arena</h3>
+        <p>Battle in the virtual world.</p>
       </div>
 
       <div class="program-card" data-program="quiz">
-        <img src="https://i.ibb.co/9vhFy2B/mystery.jpg" alt="Quiz & Mystery">
-        <h3>🧩 Quiz & Mystery Hunt</h3>
+        <img src="https://i.ibb.co/9vhFy2B/mystery.jpg" alt="Quiz">
+        <h3>Quiz & Mystery Hunt</h3>
+        <p>Challenge your mind and teamwork.</p>
       </div>
     </div>
   </section>
 
-  <!-- MODAL POPUP -->
+  <!-- MODAL -->
   <div class="modal" id="programModal">
     <div class="modal-content">
       <h3 id="modalTitle"></h3>
@@ -288,26 +297,27 @@
 
   <!-- FOOTER -->
   <footer>
-    © 2025 College Fest | Stranger Things Theme
+    © 2025 Runfinite Fest | All Rights Reserved
   </footer>
 
+  <!-- JS -->
   <script>
     const programs = {
       runfinite: {
-        title: "🏃‍♂️ Runfinite - The Infinite Run",
-        desc: "Join the ultimate endurance challenge! Race through time, space, and the Upside Down. Rules: Solo participation, 5km course, fastest wins."
+        title: "🏃‍♂️ Runfinite Marathon",
+        desc: "A 5km marathon through the campus where stamina meets strategy. Open to all students. Top 3 finishers win exciting prizes!"
       },
       sopy: {
-        title: "⚽ Sopy Football Tournament",
-        desc: "Classic 5v5 knockout football event. Team up with your squad and score your way to victory under the red lights of Hawkins Field!"
+        title: "⚽ Sopy Football",
+        desc: "A 5v5 football knockout tournament. Bring your best players and teamwork to take home the championship!"
       },
       egames: {
         title: "🎮 E-Games Arena",
-        desc: "Battle it out in COD, Valorant, or FIFA! Register your team and fight for digital glory in the most electrifying gaming arena."
+        desc: "Compete in popular titles like Valorant, FIFA, and Call of Duty. Team up and showcase your gaming skills!"
       },
       quiz: {
-        title: "🧩 Quiz & Mystery Hunt",
-        desc: "Solve riddles, decode clues, and uncover secrets from the Upside Down. The smartest mind wins — beware of the Demogorgon!"
+        title: "🧠 Quiz & Mystery Hunt",
+        desc: "Solve riddles, uncover clues, and beat the timer in this ultimate test of logic and teamwork."
       }
     };
 
