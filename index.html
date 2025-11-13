@@ -3,81 +3,43 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>College Fest 2025 | Runfinite</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>College Fest 2025</title>
+  <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
-  <!-- HERO SECTION -->
   <header>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Generic_college_logo.png" alt="College Logo">
-    <h1>Runfinite Fest 2025</h1>
-    <p>Experience innovation, creativity, and competition in our annual college fest!</p>
-    <div class="scroll-down">Scroll Down ▼</div>
+    <h1>College Fest 2025</h1>
+    <p>Explore • Experience • Enjoy</p>
   </header>
 
-  <!-- ABOUT SECTION -->
-  <section id="about">
-    <h2>About the Fest</h2>
-    <p>
-      Welcome to <strong>Runfinite Fest 2025</strong> — where energy meets innovation.  
-      Join us for an unforgettable experience filled with exciting events, sports tournaments, and e-sports showdowns.  
-      Get ready to compete, connect, and celebrate talent across every field.
-    </p>
-  </section>
-
-  <!-- PROGRAMS SECTION (SLIDER) -->
-  <section id="programs">
-    <h2>Our Programs</h2>
-
-    <div class="slider-container">
-      <button class="slide-btn prev">&#10094;</button>
-
-      <div class="program-slider">
-        <div class="program-card" data-program="runfinite">
-          <img src="https://i.ibb.co/9psTYSh/run.jpg" alt="Runfinite">
-          <h3>Runfinite Marathon</h3>
-          <p>Test your endurance and speed.</p>
-        </div>
-
-        <div class="program-card" data-program="sopy">
-          <img src="https://i.ibb.co/MhV0q7z/football.jpg" alt="Sopy Football">
-          <h3>Sopy Football</h3>
-          <p>Play your way to the trophy.</p>
-        </div>
-
-        <div class="program-card" data-program="egames">
-          <img src="https://i.ibb.co/VDH1cQh/gaming.jpg" alt="E-Games">
-          <h3>E-Games Arena</h3>
-          <p>Battle in the virtual world.</p>
-        </div>
-
-        <div class="program-card" data-program="quiz">
-          <img src="https://i.ibb.co/9vhFy2B/mystery.jpg" alt="Quiz">
-          <h3>Quiz & Mystery Hunt</h3>
-          <p>Challenge your mind and teamwork.</p>
+  <section class="slider">
+    <div class="slides">
+      <div class="slide">
+        <img src="https://source.unsplash.com/1200x600/?music,concert" alt="Battle of Bands">
+        <div class="slide-info">
+          <h2>Battle of Bands</h2>
+          <a href="event1.html" class="btn">View Details</a>
         </div>
       </div>
 
-      <button class="slide-btn next">&#10095;</button>
+      <div class="slide">
+        <img src="https://source.unsplash.com/1200x600/?dance,stage" alt="Dance Mania">
+        <div class="slide-info">
+          <h2>Dance Mania</h2>
+          <a href="event2.html" class="btn">View Details</a>
+        </div>
+      </div>
+
+      <div class="slide">
+        <img src="https://source.unsplash.com/1200x600/?coding,technology" alt="Hackathon">
+        <div class="slide-info">
+          <h2>Hackathon 24-Hour</h2>
+          <a href="event3.html" class="btn">View Details</a>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- MODAL -->
-  <div class="modal" id="programModal">
-    <div class="modal-content">
-      <h3 id="modalTitle"></h3>
-      <p id="modalDesc"></p>
-      <button class="close-btn">Close</button>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Runfinite Fest | All Rights Reserved
-  </footer>
-
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
