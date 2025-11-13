@@ -1,243 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>College Fest 2025 | Runfinite</title>
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <style>
-    /* =======================
-       GLOBAL STYLES
-    ======================= */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f7f8fc;
-      color: #222;
-      overflow-x: hidden;
-      scroll-behavior: smooth;
-    }
-
-    h1, h2, h3 {
-      font-weight: 700;
-      color: #222;
-    }
-
-    p {
-      line-height: 1.6;
-    }
-
-    /* =======================
-       HEADER / HERO
-    ======================= */
-    header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background: linear-gradient(135deg, #4f46e5, #9333ea);
-      color: white;
-      position: relative;
-    }
-
-    header img {
-      width: 120px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1rem;
-      opacity: 0.9;
-      max-width: 600px;
-    }
-
-    .scroll-down {
-      position: absolute;
-      bottom: 40px;
-      font-size: 0.9rem;
-      color: #fff;
-      animation: bounce 2s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-8px); }
-    }
-
-    /* =======================
-       ABOUT SECTION
-    ======================= */
-    section#about {
-      background: white;
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    section#about h2 {
-      color: #4f46e5;
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-
-    section#about p {
-      max-width: 700px;
-      margin: 0 auto;
-      color: #555;
-      font-size: 1rem;
-    }
-
-    /* =======================
-       PROGRAMS SECTION
-    ======================= */
-    section#programs {
-      padding: 80px 20px;
-      background: #f3f4f6;
-      text-align: center;
-    }
-
-    section#programs h2 {
-      color: #4f46e5;
-      font-size: 2rem;
-      margin-bottom: 40px;
-    }
-
-    .program-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .program-card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      transition: all 0.3s ease;
-      cursor: pointer;
-    }
-
-    .program-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    }
-
-    .program-card img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-    }
-
-    .program-card h3 {
-      font-size: 1.1rem;
-      margin: 15px 0 5px;
-      color: #333;
-    }
-
-    .program-card p {
-      color: #666;
-      font-size: 0.9rem;
-      margin-bottom: 15px;
-    }
-
-    /* =======================
-       MODAL POPUP
-    ======================= */
-    .modal {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      visibility: hidden;
-      opacity: 0;
-      transition: all 0.3s ease;
-      z-index: 999;
-    }
-
-    .modal.active {
-      visibility: visible;
-      opacity: 1;
-    }
-
-    .modal-content {
-      background: #fff;
-      border-radius: 12px;
-      padding: 30px;
-      max-width: 500px;
-      width: 90%;
-      text-align: center;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
-      animation: fadeIn 0.4s ease;
-    }
-
-    @keyframes fadeIn {
-      from { transform: scale(0.95); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
-
-    .modal-content h3 {
-      color: #4f46e5;
-      margin-bottom: 15px;
-    }
-
-    .modal-content p {
-      color: #555;
-      font-size: 0.95rem;
-      line-height: 1.6;
-    }
-
-    .close-btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #4f46e5;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .close-btn:hover {
-      background: #3730a3;
-    }
-
-    /* =======================
-       FOOTER
-    ======================= */
-    footer {
-      background: white;
-      text-align: center;
-      padding: 40px 20px;
-      color: #777;
-      font-size: 0.9rem;
-      border-top: 1px solid #eee;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <!-- HERO -->
+  <!-- HERO SECTION -->
   <header>
     <img src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Generic_college_logo.png" alt="College Logo">
     <h1>Runfinite Fest 2025</h1>
@@ -245,7 +17,7 @@
     <div class="scroll-down">Scroll Down ▼</div>
   </header>
 
-  <!-- ABOUT -->
+  <!-- ABOUT SECTION -->
   <section id="about">
     <h2>About the Fest</h2>
     <p>
@@ -255,34 +27,40 @@
     </p>
   </section>
 
-  <!-- PROGRAMS -->
+  <!-- PROGRAMS SECTION (SLIDER) -->
   <section id="programs">
     <h2>Our Programs</h2>
 
-    <div class="program-grid">
-      <div class="program-card" data-program="runfinite">
-        <img src="https://i.ibb.co/9psTYSh/run.jpg" alt="Runfinite">
-        <h3>Runfinite Marathon</h3>
-        <p>Test your endurance and speed.</p>
+    <div class="slider-container">
+      <button class="slide-btn prev">&#10094;</button>
+
+      <div class="program-slider">
+        <div class="program-card" data-program="runfinite">
+          <img src="https://i.ibb.co/9psTYSh/run.jpg" alt="Runfinite">
+          <h3>Runfinite Marathon</h3>
+          <p>Test your endurance and speed.</p>
+        </div>
+
+        <div class="program-card" data-program="sopy">
+          <img src="https://i.ibb.co/MhV0q7z/football.jpg" alt="Sopy Football">
+          <h3>Sopy Football</h3>
+          <p>Play your way to the trophy.</p>
+        </div>
+
+        <div class="program-card" data-program="egames">
+          <img src="https://i.ibb.co/VDH1cQh/gaming.jpg" alt="E-Games">
+          <h3>E-Games Arena</h3>
+          <p>Battle in the virtual world.</p>
+        </div>
+
+        <div class="program-card" data-program="quiz">
+          <img src="https://i.ibb.co/9vhFy2B/mystery.jpg" alt="Quiz">
+          <h3>Quiz & Mystery Hunt</h3>
+          <p>Challenge your mind and teamwork.</p>
+        </div>
       </div>
 
-      <div class="program-card" data-program="sopy">
-        <img src="https://i.ibb.co/MhV0q7z/football.jpg" alt="Sopy Football">
-        <h3>Sopy Football</h3>
-        <p>Play your way to the trophy.</p>
-      </div>
-
-      <div class="program-card" data-program="egames">
-        <img src="https://i.ibb.co/VDH1cQh/gaming.jpg" alt="E-Games">
-        <h3>E-Games Arena</h3>
-        <p>Battle in the virtual world.</p>
-      </div>
-
-      <div class="program-card" data-program="quiz">
-        <img src="https://i.ibb.co/9vhFy2B/mystery.jpg" alt="Quiz">
-        <h3>Quiz & Mystery Hunt</h3>
-        <p>Challenge your mind and teamwork.</p>
-      </div>
+      <button class="slide-btn next">&#10095;</button>
     </div>
   </section>
 
@@ -300,48 +78,6 @@
     © 2025 Runfinite Fest | All Rights Reserved
   </footer>
 
-  <!-- JS -->
-  <script>
-    const programs = {
-      runfinite: {
-        title: "🏃‍♂️ Runfinite Marathon",
-        desc: "A 5km marathon through the campus where stamina meets strategy. Open to all students. Top 3 finishers win exciting prizes!"
-      },
-      sopy: {
-        title: "⚽ Sopy Football",
-        desc: "A 5v5 football knockout tournament. Bring your best players and teamwork to take home the championship!"
-      },
-      egames: {
-        title: "🎮 E-Games Arena",
-        desc: "Compete in popular titles like Valorant, FIFA, and Call of Duty. Team up and showcase your gaming skills!"
-      },
-      quiz: {
-        title: "🧠 Quiz & Mystery Hunt",
-        desc: "Solve riddles, uncover clues, and beat the timer in this ultimate test of logic and teamwork."
-      }
-    };
-
-    const modal = document.getElementById("programModal");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalDesc = document.getElementById("modalDesc");
-    const closeBtn = document.querySelector(".close-btn");
-
-    document.querySelectorAll(".program-card").forEach(card => {
-      card.addEventListener("click", () => {
-        const id = card.getAttribute("data-program");
-        modalTitle.textContent = programs[id].title;
-        modalDesc.textContent = programs[id].desc;
-        modal.classList.add("active");
-      });
-    });
-
-    closeBtn.addEventListener("click", () => {
-      modal.classList.remove("active");
-    });
-
-    window.addEventListener("click", e => {
-      if (e.target === modal) modal.classList.remove("active");
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
