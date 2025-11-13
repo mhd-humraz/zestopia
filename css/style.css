@@ -1,4 +1,4 @@
-/* 🌌 GLOBAL STYLES */
+/* 🌌 GENERAL */
 * {
   margin: 0;
   padding: 0;
@@ -7,13 +7,12 @@
 }
 
 body {
-  background-color: #0b0c10;
-  color: #ffffff;
+  background: #0b0c10;
+  color: #fff;
   overflow-x: hidden;
-  line-height: 1.6;
 }
 
-/* 🔹 HEADER */
+/* HEADER */
 header {
   text-align: center;
   padding: 3rem 1rem 2rem;
@@ -24,148 +23,109 @@ header {
 
 header h1 {
   font-size: 2.8rem;
-  letter-spacing: 1px;
   text-transform: uppercase;
 }
 
 header p {
   color: #c5c6c7;
   font-size: 1.1rem;
-  margin-top: 0.5rem;
 }
 
-/* 🖼️ SLIDER SECTION */
-.slider {
+/* 🎞️ SLIDER CONTAINER */
+.slider-container {
   position: relative;
   max-width: 90%;
   margin: 3rem auto;
   overflow: hidden;
-  border-radius: 20px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.6);
 }
 
-.slides {
+.slider {
   display: flex;
-  transition: transform 1s ease-in-out;
+  gap: 2rem;
+  transition: transform 1s ease;
 }
 
+/* 📦 SLIDE BOX STYLE */
 .slide {
-  min-width: 100%;
-  position: relative;
+  background: #1f2833;
+  border-radius: 15px;
+  flex: 0 0 300px; /* vertical rectangular card */
+  height: 420px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .slide img {
   width: 100%;
-  height: 75vh;
+  height: 65%;
   object-fit: cover;
-  filter: brightness(70%) contrast(110%);
-  transition: transform 1.2s ease;
+  border-bottom: 3px solid #45a29e;
 }
 
-.slide:hover img {
-  transform: scale(1.05);
+.slide h3 {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #66fcf1;
 }
 
-.slide-info {
-  position: absolute;
-  bottom: 15%;
-  left: 8%;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 1.5rem 2rem;
-  border-radius: 12px;
-  backdrop-filter: blur(8px);
-}
-
-.slide-info h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #ffffff;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
-}
-
-/* 🟩 BUTTONS */
-.btn {
+.slide .btn {
   display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
   background: linear-gradient(90deg, #45a29e, #66fcf1);
   color: #0b0c10;
-  padding: 0.8rem 1.8rem;
-  border-radius: 25px;
   text-decoration: none;
+  border-radius: 20px;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.3s;
+}
+
+.slide .btn:hover {
+  transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(102, 252, 241, 0.4);
 }
 
-.btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 18px rgba(102, 252, 241, 0.6);
+.slide:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(102, 252, 241, 0.2);
 }
 
-/* Secondary button */
-.btn.secondary {
-  background: transparent;
+/* 🔄 NAVIGATION ARROWS */
+.nav {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  font-size: 2.5rem;
   color: #66fcf1;
-  border: 2px solid #45a29e;
-  box-shadow: none;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.3s;
 }
 
-.btn.secondary:hover {
+.nav:hover {
   background: #45a29e;
   color: #0b0c10;
 }
 
-/* 🧾 EVENT DETAILS PAGE */
-.event-details {
-  max-width: 900px;
-  margin: 4rem auto;
-  background: #1f2833;
-  border-radius: 20px;
-  padding: 3rem;
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
-  transition: transform 0.3s ease;
+.prev {
+  left: 10px;
 }
 
-.event-details:hover {
-  transform: scale(1.01);
+.next {
+  right: 10px;
 }
 
-.event-details img {
-  width: 100%;
-  border-radius: 15px;
-  margin-bottom: 2rem;
-}
-
-.event-details p {
-  color: #c5c6c7;
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  text-align: justify;
-}
-
-.event-details ul {
-  list-style: none;
-  margin-bottom: 2rem;
-  padding-left: 0;
-}
-
-.event-details li {
-  color: #66fcf1;
-  font-size: 1rem;
-  margin: 0.5rem 0;
-}
-
-.buttons {
-  display: flex;
-  gap: 1.2rem;
-}
-
-/* 🌀 SMOOTH ANIMATIONS */
-@keyframes fadeIn {
+/* 🌀 Smooth animation */
+@keyframes fade {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.event-details,
-.slide-info {
-  animation: fadeIn 1s ease forwards;
+.slide {
+  animation: fade 1s ease both;
 }
