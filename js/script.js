@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     id: 1,
                     name: "Hackathon 2024",
                     description: "24-hour coding marathon to solve real-world problems",
-                    image: "images/hackathon.jpg",
+                    image: "event1.jpg",
                     date: "Mar 15, 2024",
                     category: "Competition",
                     time: "10:00 AM",
