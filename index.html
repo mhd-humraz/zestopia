@@ -15,7 +15,7 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-icon">??</span>
+                <span class="logo-icon">🎓</span>
                 <span class="logo-text">CampusEvents</span>
             </div>
             
@@ -59,8 +59,8 @@
                     Your gateway to unforgettable college experiences.
                 </p>
                 <div class="hero-actions">
-                    <a href="#upcoming" class="btn btn-primary">
-                        <span>View  Events</span>
+                    <a href="#events" class="btn btn-primary">
+                        <span>View Events</span>
                         <svg class="btn-icon" viewBox="0 0 24 24">
                             <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
                         </svg>
@@ -72,20 +72,20 @@
                 <div class="floating-cards">
                     <div class="floating-card card-1">
                         <div class="card-content">
-                            
-                            <span class="card-text">soapy football</span>
+                            <span class="card-emoji">⚽</span>
+                            <span class="card-text">Soapy Football</span>
                         </div>
                     </div>
                     <div class="floating-card card-2">
                         <div class="card-content">
-                            
-                            <span class="card-text">runfinity</span>
+                            <span class="card-emoji">🏃</span>
+                            <span class="card-text">Runfinity</span>
                         </div>
                     </div>
                     <div class="floating-card card-3">
                         <div class="card-content">
-                            
-                            <span class="card-text">egames</span>
+                            <span class="card-emoji">🎮</span>
+                            <span class="card-text">E-Games</span>
                         </div>
                     </div>
                 </div>
@@ -93,21 +93,21 @@
         </div>
     </section>
 
-    <!-- Upcoming Events Section --><!--
+    <!-- Upcoming Events Section -->
     <section id="upcoming" class="upcoming-section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title"> Events</h2>
+                <h2 class="section-title">Featured Events</h2>
                 <p class="section-subtitle">
                     Register now for these exciting upcoming events
                 </p>
             </div>
 
             <div class="events-grid" id="upcomingEvents">
-                <!-- Events will be loaded here -->
+                <!-- Upcoming Events will be loaded here by JavaScript -->
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- All Events Slideshow Section -->
     <section id="events" class="events-section">
@@ -121,7 +121,65 @@
 
             <div class="events-slideshow">
                 <div class="slideshow-track" id="slideshowTrack">
-                    <!-- Events slides will be loaded here -->
+                    <!-- Event 1 -->
+                    <div class="event-slide" data-event-id="event-1">
+                        <div class="event-slide-image">
+                            <img src="assets/images/runfinity.jpg" alt="RUNFINITY"
+                                 onerror="this.src='https://via.placeholder.com/400x250/6366f1/ffffff?text=RUNFINITY'">
+                        </div>
+                        <div class="event-slide-content">
+                            <h3 class="event-slide-title">RUNFINITY</h3>
+                            <p class="event-slide-description">24-hour coding marathon to solve real-world challenges with amazing prizes.</p>
+                            <div class="event-slide-meta">
+                                <span class="event-slide-date">March 15, 2024</span>
+                                <span class="event-slide-category">Competition</span>
+                            </div>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfK6txVzvf7VyPxMtXbx14yWaNFGCB-IIPdXAsS9krWfPnQIA/viewform?usp=header" 
+                               target="_blank" class="event-slide-register">
+                                Register Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Event 2 -->
+                    <div class="event-slide" data-event-id="event-2">
+                        <div class="event-slide-image">
+                            <img src="assets/images/soapy-football.jpg" alt="Soapy Football"
+                                 onerror="this.src='https://via.placeholder.com/400x250/6366f1/ffffff?text=Soapy+Football'">
+                        </div>
+                        <div class="event-slide-content">
+                            <h3 class="event-slide-title">Soapy Football</h3>
+                            <p class="event-slide-description">Hands-on workshop on artificial intelligence and machine learning fundamentals.</p>
+                            <div class="event-slide-meta">
+                                <span class="event-slide-date">March 16, 2024</span>
+                                <span class="event-slide-category">Workshop</span>
+                            </div>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSd-eZwyj1hLvDZHebH7FrPxVO8pyR3adpPnBzC3yEhhuwz1bw/viewform?usp=header" 
+                               target="_blank" class="event-slide-register">
+                                Register Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Event 3 -->
+                    <div class="event-slide" data-event-id="event-3">
+                        <div class="event-slide-image">
+                            <img src="assets/images/egames.jpg" alt="E-Games"
+                                 onerror="this.src='https://via.placeholder.com/400x250/6366f1/ffffff?text=E-Games'">
+                        </div>
+                        <div class="event-slide-content">
+                            <h3 class="event-slide-title">E-Games</h3>
+                            <p class="event-slide-description">Music competition featuring the best college bands from across the region.</p>
+                            <div class="event-slide-meta">
+                                <span class="event-slide-date">April 5, 2024</span>
+                                <span class="event-slide-category">Music</span>
+                            </div>
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfwydwjWQ4aciXJf3Kh4Zjl9c9YvMinP8EbKTD2G2Guy70tYg/viewform?usp=header" 
+                               target="_blank" class="event-slide-register">
+                                Register Now
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 
                 <div class="slideshow-controls">
@@ -155,21 +213,21 @@
             <div class="contact-content">
                 <div class="contact-info">
                     <div class="contact-item">
-                        <div class="contact-icon">??</div>
+                        <div class="contact-icon">📧</div>
                         <div class="contact-details">
                             <h3>Email</h3>
                             <p>events@campus.edu</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">??</div>
+                        <div class="contact-icon">📱</div>
                         <div class="contact-details">
                             <h3>Phone</h3>
                             <p>+1 (555) 123-4567</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">??</div>
+                        <div class="contact-icon">🏢</div>
                         <div class="contact-details">
                             <h3>Office</h3>
                             <p>Student Center, Room 205</p>
@@ -186,7 +244,7 @@
             <div class="footer-content">
                 <div class="footer-brand">
                     <div class="nav-logo">
-                        <span class="logo-icon">??</span>
+                        <span class="logo-icon">🎓</span>
                         <span class="logo-text">CampusEvents</span>
                     </div>
                     <p class="footer-description">
@@ -210,6 +268,45 @@
             </div>
         </div>
     </footer>
+
+    <!-- Event Data Script -->
+    <script>
+        // Event data moved from script.js to HTML
+        const eventsData = {
+            upcoming: [
+                {
+                    id: 'upcoming-1',
+                    name: 'Soapy Football',
+                    description: 'Exciting football tournament with fun challenges and amazing prizes.',
+                    image: 'assets/images/soapy-football.jpg',
+                    date: '2024-03-15',
+                    category: 'Sports',
+                    registerUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSd-eZwyj1hLvDZHebH7FrPxVO8pyR3adpPnBzC3yEhhuwz1bw/viewform?usp=header',
+                    badge: 'Featured'
+                },
+                {
+                    id: 'upcoming-2',
+                    name: 'RUNFINITY',
+                    description: 'Marathon event for fitness enthusiasts with multiple categories.',
+                    image: 'assets/images/runfinity.jpg',
+                    date: '2024-04-05',
+                    category: 'Sports',
+                    registerUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfK6txVzvf7VyPxMtXbx14yWaNFGCB-IIPdXAsS9krWfPnQIA/viewform?usp=header',
+                    badge: 'Popular'
+                },
+                {
+                    id: 'upcoming-3',
+                    name: 'E-Games',
+                    description: 'Gaming tournament featuring popular esports titles.',
+                    image: 'assets/images/egames.jpg',
+                    date: '2024-02-20',
+                    category: 'Gaming',
+                    registerUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfwydwjWQ4aciXJf3Kh4Zjl9c9YvMinP8EbKTD2G2Guy70tYg/viewform?usp=header',
+                    badge: 'New'
+                }
+            ]
+        };
+    </script>
 
     <script src="js/script.js"></script>
 </body>
